@@ -103,9 +103,11 @@ modifier whenNotPaused() {
             require(_StakedNFT.owner == msg.sender, "not the owner");
             require(_StakedNFT.claimedBlock != 0, "NFT unstaked");
             require(block.number >= _StakedNFT.claimedBlock + rewardDelayPeriod, "claim delay not met");
-             rewardPerBlock = block.number - _StakedNFT.claimedBlock;
-            totalRewards += reward;
-            _StakedNFT.claimedBlock = block.number;
+         
+        uint blockStaked = block.number - _StakedNFT.claimedBlock;
+        uint rewardAmount = blockStaked * rewardPerBlock;
+        totalRewards += rewardAmount;
+        _StakedNFT.claimedBlock = block.number;
 
 
 
