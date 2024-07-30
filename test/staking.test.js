@@ -1,5 +1,4 @@
 
-
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
@@ -98,8 +97,8 @@ expect(stakedNFT.claimedBlock).to.be.gt(0);
 
 
 
-    })
-})
+    });
+});
 
 
     });
