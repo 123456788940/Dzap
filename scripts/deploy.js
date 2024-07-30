@@ -22,7 +22,7 @@ async function main() {
     console.log("Deploying MockERC20....");
     
     const mockERC20 = await MockERC20.deploy();
-    await MockERC20.deployed();
+    await MockERC20.deploy();
     console.log(`MockERC20 deployed to: ${mockERC20.address}`);
 
 
