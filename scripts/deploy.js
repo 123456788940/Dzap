@@ -13,7 +13,7 @@ async function main() {
     console.log("Deploying MockERC721....");
     
     const mockERC721 = await MockERC721.deploy();
-    await MockERC721.deployed();
+    await MockERC721.deploy();
     console.log(`MockERC721 deployed to: ${mockERC721.address}`);
 
 
